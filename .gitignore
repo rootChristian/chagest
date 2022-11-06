@@ -1,0 +1,8 @@
+# misc
+.DS_Store
+
+# backend
+/backend_chagest
+
+# frontend
+/frontend_chagest
