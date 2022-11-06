@@ -10,7 +10,7 @@ Chagest entreprise
 
 ### Install a dependencies:
 
--   npm i -s nodemon cookie-parser cors dotenv uuid date-fns jsonwebtoken crypto-js multer mongoose mongoose-sequence express express-rate-limiter express-async-handler express-async-errors
+-   npm i -s nodemon -D express express-rate-limiter express-async-handler express-async-errors cookie-parser cors dotenv uuid date-fns jsonwebtoken crypto-js multer mongoose mongoose-sequence
 
 ### links utils:
 
