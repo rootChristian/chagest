@@ -53,8 +53,8 @@ const userSchema = new mongoose.Schema(
 
 userSchema.plugin(AutoIncrement, {
     inc_field: 'ticket',
-    id: 'ticketNums',
-    start_seq: 500
+    id: 'ticketNumber',
+    start_seq: 1
 });
 
 module.exports = mongoose.model('User', userSchema);
