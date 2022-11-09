@@ -1,18 +1,18 @@
 # CHAGEST PROJECT
 
-Chagest entreprise
+`Chagest entreprise`
 
-## Backend dependencies:
+# `Backend dependencies`
 
-### Initialize json package:
+### Initialize json package
 
--   npm init
+-   `npm init`
 
-### Install a dependencies:
+### Install a dependencies
 
--   npm i -s nodemon -D express express-rate-limiter express-async-handler express-async-errors cookie-parser cors dotenv uuid date-fns jsonwebtoken crypto-js multer mongoose mongoose-sequence
+-   `npm i -s nodemon -D express express-rate-limiter express-async-handler express-async-errors cookie-parser cors dotenv uuid date-fns jsonwebtoken crypto-js multer mongoose mongoose-sequence`
 
-### links utils:
+### links utils
 
 -   https://www.npmjs.com/package/mongoose-sequence
 -   https://www.npmjs.com/package/date-fns
@@ -29,4 +29,35 @@ Chagest entreprise
 -   https://www.npmjs.com/package/crypto-js
 -   https://www.npmjs.com/package/multer
 
-## Frontend dependencies:
+# `Frontend dependencies:`
+
+# Getting Started with Create React App
+
+-   `npx create-react-app`
+
+## Install a dependencies
+
+-   `npm i -s react-router-dom react-toastify styled-components react-hook-form react-icons react-loading-icons react-redux @reduxjs/toolkit`
+
+## links utils
+
+-   https://www.npmjs.com/package/react-icons
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
