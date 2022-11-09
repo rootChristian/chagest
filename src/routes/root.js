@@ -1,3 +1,7 @@
+/***********************************************************************
+************ Author:    Christian KEMGANG NGUESSOP *********************
+************ Version:    1.0.0                      ********************
+***********************************************************************/
 const express = require('express')
 const router = express.Router()
 const path = require('path')
