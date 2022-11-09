@@ -17,7 +17,8 @@ const port = process.env.PORT || 8000;
 const api = process.env.API_URL;
 
 // Get all the routes
-const userRoutes = require('./src/routes/UserRoute');
+const authRoutes = require('./src/routes/authRoute');
+const userRoutes = require('./src/routes/userRoute');
 
 app.use(logger);
 
@@ -31,6 +32,7 @@ app.use('/', express.static(path.join(__dirname, 'public')));
 
 app.use('/', require('./src/routes/root'));
 
+app.use(`${api}/auth`, authRoutes);
 app.use(`${api}/users`, userRoutes);
 
 app.all('*', (req, res) => {

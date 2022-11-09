@@ -1,4 +1,4 @@
-const rateLimit = require('express-rate-limit')
+const rateLimit = require('express-rate-limiter')
 const { logEvents } = require('./logger')
 
 const loginLimiter = rateLimit({
@@ -14,4 +14,4 @@ const loginLimiter = rateLimit({
     legacyHeaders: false, // Disable the `X-RateLimit-*` headers
 })
 
-module.exports = loginLimiter
+module.exports = loginLimiter;

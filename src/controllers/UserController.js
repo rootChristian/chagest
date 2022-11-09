@@ -25,7 +25,7 @@ module.exports.createNewUser = asyncHandler(async (req, res) => {
 
     // Confirm data
     if (!username || !email || !firstname || !lastname || !password || !gender || !Array.isArray(roles) || !roles.length /*|| !image*/) {
-        return res.status(400).json({ message: 'All fields are required' });
+        return res.status(400).json({ message: 'All fields are required!' });
     }
 
     // Check for duplicate username
