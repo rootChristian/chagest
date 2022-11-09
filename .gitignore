@@ -8,7 +8,7 @@
 .env
 
 # Logs
-/logs
+/src/logs
 
 # frontend
 /../frontend_chagest
