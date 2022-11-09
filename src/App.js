@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+/***********************************************************************
+************ Author:    Christian KEMGANG NGUESSOP *********************
+************ Version:    1.0.0                      ********************
+***********************************************************************/
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Footer from "./components/footer/Footer";
+import Header from "./components/header/Header";
+import Home from "./components/home/Home";
+//import ErrorPage from "./components/errorPage/ErrorPage";
+import { Container } from "./styles/styledApp/App.Styled";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <Container>
+        <ToastContainer />
+        <Header />
+        <Routes>
+          <Route path='/' exact element={<Home />} />
+          <Route path='*' element={<Navigate to='/' replace />} />
+        </Routes>
+        <Footer />
+      </Container>
+    </Router>
+  )
 }
 
-export default App;
+export default App
