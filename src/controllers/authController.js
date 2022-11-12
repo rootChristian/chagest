@@ -1,3 +1,7 @@
+/***********************************************************************
+************ Author:    Christian KEMGANG NGUESSOP *********************
+************ Version:    1.0.0                      ********************
+***********************************************************************/
 const User = require('../models/userModel');
 const CryptoJS = require('crypto-js');
 const jwt = require('jsonwebtoken');
@@ -60,7 +64,6 @@ module.exports.login = asyncHandler(async (req, res, done) => {
     res.json({ accessToken });
 })
 
-
 // Refresh token because access token has expired
 module.exports.refresh = (req, res) => {
     const cookies = req.cookies
@@ -94,7 +97,6 @@ module.exports.refresh = (req, res) => {
         })
     )
 }
-
 
 // User clear cookie if exists
 module.exports.logout = (req, res) => {
