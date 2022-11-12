@@ -10,10 +10,11 @@
 
 ### Install a dependencies
 
--   `npm i -s nodemon -D express express-rate-limiter express-async-handler express-async-errors cookie-parser cors dotenv uuid date-fns jsonwebtoken crypto-js multer mongoose mongoose-sequence`
+-   `npm i -s nodemon -D express express-rate-limit express-async-handler express-async-errors cookie-parser cors dotenv uuid date-fns jsonwebtoken crypto-js multer mongoose mongoose-sequence`
 
 ### links utils
 
+-   https://www.npmjs.com/package/express-rate-limit
 -   https://www.npmjs.com/package/mongoose-sequence
 -   https://www.npmjs.com/package/date-fns
 -   https://www.npmjs.com/package/dotenv
