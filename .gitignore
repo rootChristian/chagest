@@ -1,7 +1,7 @@
 # Don't share those files
 Dockerfile
 
-.gitignore
+.dockerignore
 
 /../README.md
 
