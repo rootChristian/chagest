@@ -1,8 +1,13 @@
 # misc
 .DS_Store
 
+docker-compose.yml
+
 # backend
 /backend_chagest
 
 # frontend
 /frontend_chagest
+
+# nginx
+/nginx_chagest
