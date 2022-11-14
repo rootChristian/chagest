@@ -11,7 +11,7 @@ const asyncHandler = require('express-async-handler');
 module.exports.login = asyncHandler(async (req, res, done) => {
     const { username, email, password } = req.body
 
-    if ((!!email && !!username) || (!email && !username)) {
+    if ((!email && !username)) {
         return res.status(400).json({ message: 'Username or email is required!' });
     }
 
@@ -52,25 +52,27 @@ module.exports.login = asyncHandler(async (req, res, done) => {
         { expiresIn: '7d' }
     )
 
-    // Create secure cookie with refresh token 
+    // Create and save a secure cookie with refresh token
     res.cookie('jwt', refreshToken, {
         httpOnly: true, //accessible only by web server 
         secure: true, //https
         sameSite: 'None', //cross-site cookie 
-        maxAge: 7 * 24 * 60 * 60 * 1000 //cookie expiry
+        maxAge: 7 * 24 * 60 * 60 * 1000 //cookie expiry after 7 days
     })
 
     // Send accessToken containing username and roles 
     res.json({ accessToken });
-})
+});
 
 // Refresh token because access token has expired
 module.exports.refresh = (req, res) => {
     const cookies = req.cookies
+    //console.log("COOK: ", cookies)
 
-    if (!cookies?.jwt) return res.status(401).json({ message: 'Unauthorized!' });
+    if (!cookies?.jwt) return res.status(401).json({ message: 'Unauthorized!' })
 
     const refreshToken = cookies.jwt
+    //console.log("COOKIES: ", refreshToken)
 
     jwt.verify(
         refreshToken,
@@ -96,12 +98,15 @@ module.exports.refresh = (req, res) => {
             res.json({ accessToken });
         })
     )
-}
+};
 
 // User clear cookie if exists
 module.exports.logout = (req, res) => {
     const cookies = req.cookies
-    if (!cookies?.jwt) return res.sendStatus(204); //No content
-    res.clearCookie('jwt', { httpOnly: true, sameSite: 'None', secure: true });
-    res.json({ message: 'Cookie cleared' });
-}
+    //console.log('COOKIES: ', cookies?.jwt)
+
+    if (!cookies?.jwt) return res.sendStatus(204) //No content
+    res.clearCookie('jwt', { httpOnly: true, sameSite: 'None', secure: true })
+    res.json({ message: 'Cookie cleared' })
+    res.redirect('/');
+};

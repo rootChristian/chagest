@@ -1,4 +1,23 @@
-const jwt = require('jsonwebtoken')
+/***********************************************************************
+************ Author:    Christian KEMGANG NGUESSOP *********************
+************ Version:    1.0.0                      ********************
+***********************************************************************/
+const jwt = require('jsonwebtoken');
+
+//Check and verify token
+/*module.exports.verifyToken = async (req, res, next) => {
+    const token = req.headers["x-access-token"];
+
+    if (!token)
+        return res.status(403).send("Access denied. Not authenticated...");
+    try {
+        const decodeUser = await jwt.verify(token, config.SECRET_TOKEN);
+        req.user = decodeUser;
+    } catch (err) {
+        return res.status(401).send("Invalid Token!");
+    }
+    return next();
+};*/
 
 const verifyToken = (req, res, next) => {
     const authHeader = req.headers.authorization || req.headers.Authorization
@@ -11,7 +30,7 @@ const verifyToken = (req, res, next) => {
 
     jwt.verify(
         token,
-        process.env.ACCESS_TOKEN_SECRET,
+        process.env.SECRET_TOKEN,
         (err, decoded) => {
             if (err) return res.status(403).json({ message: 'Forbidden' })
             req.user = decoded.UserInfo.username
@@ -19,6 +38,6 @@ const verifyToken = (req, res, next) => {
             next()
         }
     )
-}
+};
 
 module.exports = verifyToken;

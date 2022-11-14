@@ -4,14 +4,14 @@
 ***********************************************************************/
 const router = require('express').Router();
 const userController = require("../controllers/userController");
-//const { verifyTokenAndAdmin, verifyTokenAndAuthorized } = require("../middleware/AuthMiddleware");
+const verifyToken = require('../middleware/verifyToken');
 
 //Routes
-//router.post('/', verifyTokenAndAdmin, userController.addUser);
+// Secure all routes
+router.use(verifyToken);
 router.get('/', userController.getAllUsers);
 router.post('/', userController.createNewUser);
 router.patch('/', userController.updateUser);
 router.delete('/', userController.deleteUser);
-
 
 module.exports = router;

@@ -1,3 +1,10 @@
+# Don't share those files
+Dockerfile
+
+.dockerignore
+
+/../README.md
+
 # misc
 .DS_Store
 
@@ -12,3 +19,6 @@
 
 # frontend
 /../frontend_chagest
+
+# nginx
+/../nginx_chagest
