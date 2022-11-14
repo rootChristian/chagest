@@ -1,5 +1,10 @@
+# nginx
+/../nginx_chagest
+
 # backend
 /../backend_chagest
+
+/../README.md
 
 # dependencies
 /node_modules
@@ -14,6 +19,10 @@
 
 # misc
 .DS_Store
+
+Dockerfile
+
+.dockerignore
 
 .env.local
 .env.development.local
