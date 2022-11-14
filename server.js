@@ -13,7 +13,8 @@ const cors = require('cors');
 const corsOptions = require('./src/config/corsOptions');
 const mongoose = require('mongoose');
 require('./src/config/dbConn'); // DB connection
-const port = process.env.PORT || 8000;
+const env = process.env.NODE_ENV
+const port = process.env.PORT || 5000;
 const api = process.env.API_URL;
 
 // Get all the routes
@@ -50,6 +51,6 @@ app.use(errorHandler);
 
 app.listen(port, () => {
     console.log('************************************************'
-        + `\n(${process.env.NODE_ENV}) Server is running on the port ${port}` +
+        + `\n(${env}) Server is running on the port ${port}` +
         '\n************************************************');
 });
