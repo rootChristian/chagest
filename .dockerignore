@@ -1,0 +1,17 @@
+# Don't share those files
+Dockerfile
+
+.dockerignore
+
+.gitignore
+
+/../README.md
+
+# misc
+.DS_Store
+
+# frontend
+/../frontend_chagest
+
+# backend
+/../backend_chagest
