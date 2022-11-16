@@ -1,23 +1,23 @@
 # DOCKER COMMAND
 
-`Backend dev`
+### Backend dev
 
 -   `docker build -f Dockerfile.dev -t server .`
 -   `docker run -it -p 4000:8000 server`
 
-`Frontend dev`
+### Frontend dev
 
 -   `docker build -f Dockerfile.dev -t client .`
 -   `docker run -it -p 4000:3000 client`
 
-`Nginx dev`
+### Nginx dev
 
 -   `docker build -f Dockerfile.dev -t chagest .`
 -   `docker run -it -p 80:80 chagest`
 
 # DOCKER COMPOSE COMMAND
 
-`Run App`
+### Build and Run Application
 
 -   `make build` OR `docker-compose up -d --build`
 -   `make up` OR `docker-compose up -d`
