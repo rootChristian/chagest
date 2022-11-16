@@ -20,7 +20,7 @@
 # misc
 .DS_Store
 
-Dockerfile
+#Dockerfile
 
 .dockerignore
 
