@@ -1,26 +1,26 @@
 # DOCKER COMMAND
 
-`@Backend dev`
+`Backend dev`
 
--   docker build -f Dockerfile.dev -t server .
--   docker run -it -p 4000:8000 server
+-   `docker build -f Dockerfile.dev -t server .`
+-   `docker run -it -p 4000:8000 server`
 
 `Frontend dev`
 
--   docker build -f Dockerfile.dev -t client .
--   docker run -it -p 4000:3000 client
+-   `docker build -f Dockerfile.dev -t client .`
+-   `docker run -it -p 4000:3000 client`
 
 `Nginx dev`
 
--   docker build -f Dockerfile.dev -t chagest .
--   docker run -it -p 80:80 chagest
+-   `docker build -f Dockerfile.dev -t chagest .`
+-   `docker run -it -p 80:80 chagest`
 
 # DOCKER COMPOSE COMMAND
 
 `Run App`
 
--   `make build` OU - `docker-compose up -d --build`
--   `make up` OU - `docker-compose up -d`
+-   `make build` OR `docker-compose up -d --build`
+-   `make up` OR `docker-compose up -d`
 
 # CHAGEST PROJECT
 
