@@ -14,7 +14,7 @@ const corsOptions = require('./src/config/corsOptions');
 const mongoose = require('mongoose');
 require('./src/config/dbConn'); // DB connection
 const env = process.env.NODE_ENV
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8000;
 const api = process.env.API_URL;
 
 // Get all the routes
