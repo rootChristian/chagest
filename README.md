@@ -1,16 +1,19 @@
 # DOCKER COMMAND
 
 `Backend dev`
-docker build -f Dockerfile.dev -t server .
-docker run -it -p 4000:8000 server
+
+-   docker build -f Dockerfile.dev -t server .
+-   docker run -it -p 4000:8000 server
 
 `Frontend dev`
-docker build -f Dockerfile.dev -t client .
-docker run -it -p 4000:3000 client
+
+-   docker build -f Dockerfile.dev -t client .
+-   docker run -it -p 4000:3000 client
 
 `Nginx dev`
-docker build -f Dockerfile.dev -t chagest .
-docker run -it -p 80:80 chagest
+
+-   docker build -f Dockerfile.dev -t chagest .
+-   docker run -it -p 80:80 chagest
 
 # DOCKER COMPOSE COMMAND
 
